@@ -5,11 +5,20 @@
 @import './icon';
 @import './nav';
 @import './top-bar';
+@import './menu';
 
 body {
   min-width: 320px;
   background: $bg-black-color;
   margin: 0;
+
+  &:has(.menu:target) {
+    overflow: hidden;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container{

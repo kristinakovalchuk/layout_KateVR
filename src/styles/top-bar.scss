@@ -14,7 +14,7 @@
     justify-content: left;
   }
 
-  &__logo-link{
+  &__logo{
     width: 58px;
     height: 12px;
 
@@ -24,9 +24,12 @@
     }
 
     @include on-desktop{
-      padding-right: 34.5px;
-      width: 77.5px;
+      width: 77px;
       height: 16px;
+    }
+
+    &-link{
+      padding-right: 34.5px;
     }
   }
 
@@ -63,5 +66,29 @@
     @include button;
 
     width: 200px;
+  }
+
+  &__menu{
+    display: flex;
+    padding-block: 20px 38px;
+    justify-content: end;
+
+    @include padding-inline;
+
+    @include on-tablet{
+      padding-block: 34px 46px;
+    }
+  }
+
+  &__language{
+    display: flex;
+    padding-block: 20px 38px;
+    justify-content: start;
+
+    @include padding-inline;
+
+    @include on-tablet{
+      padding-block: 34px 46px;
+    }
   }
 }

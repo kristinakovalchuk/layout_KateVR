@@ -24,4 +24,17 @@
     }
   }
 
+  &--close{
+    width: 17px;
+    height: 17px;
+    background-image: url('../images/icon/icon-close-kat.svg');
+  }
+
+  &--arrow-turn-back{
+    width: 8.5px;
+    height: 17px;
+    padding-inline: 5px;
+    background-image: url('../images/icon/arrow-turn-back-kat.svg');
+  }
+
 }

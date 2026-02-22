@@ -3,6 +3,15 @@
   display: flex;
   flex-direction: column;
 
+
+  @include on-tablet{
+    padding-bottom: 70px;
+  }
+
+  @include on-desktop{
+    padding-bottom: 84px;
+  }
+
   &__bottom{
     @include page-grid;
 
@@ -171,7 +180,6 @@
       grid-column: 1 /-1;
       margin-top: 84px;
       z-index: 3;
-      margin-bottom: 84px;
 
       @include on-desktop{
         display: flex;
