@@ -1,0 +1,30 @@
+.nav{
+  &__menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    gap: 37px;
+  }
+
+  &__list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 36px;
+  }
+
+  &__link{
+    margin: 0;
+    text-decoration: none;
+
+    font-family: Inter,sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    color: $white-color;
+
+    @include hover(color, $main-blue-color);
+  }
+}

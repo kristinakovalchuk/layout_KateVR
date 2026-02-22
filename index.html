@@ -6,14 +6,108 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Title</title>
+    <title>KatVR</title>
     <link
       rel="stylesheet"
       href="src/styles/main.scss"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./src/images/kate-fav.svg" type="image/x-icon">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header">
+      <div class="container">
+
+        <div class="top-bar">
+          <a href="#" class="top-bar__logo-link">
+            <img src="./src/images/kate-log.svg" alt="logo">
+          </a>
+
+          <div class="top-bar__hidden">
+
+            <div class="top-bar__lang-switcher">
+              <a href="#language" class="top-bar__lang-switcher__text">En</a>
+              <a href="#language" class="icon icon--lang-arrow"></a>
+            </div>
+
+            <nav class="nav__menu">
+              <ul class="nav__list">
+                <li><p class="nav__link">About</p></li>
+                <li><p class="nav__link">Tech</p></li>
+                <li><p class="nav__link">Benefits</p></li>
+                <li><p class="nav__link">Contact</p></li>
+              </ul>
+
+              <a href="buy.html" class="top-bar__button">Buy Now</a>
+            </nav>
+          </div>
+
+          <a href="#menu" class="icon icon--menu"></a>
+        </div>
+
+        <div class="header__bottom">
+
+          <img
+            src="./src/images/bg-img/kat-header-img.svg"
+            alt="img"
+            class="header__bottom__img">
+
+          <div class="header__bottom__title">
+            <p class="header__bottom__title-white">THE NEW START OF</p>
+            <p class="header__bottom__title-blue">VR LOCOMOTION</p>
+          </div>
+
+          <div class="header__bottom__description">
+            <p class="header__bottom__desc-text">
+              Discover the most comprehensive VR Locomotion system, and unlock infinite motion in any games on any platforms!
+            </p>
+
+            <p class="header__bottom__prise">1200$</p>
+
+            <a href="header__bottom__play-link">
+              <img
+                src="./src/images/bg-img/video-play.svg"
+                alt="photo-button"
+                class="header__bottom__play">
+            </a>
+          </div>
+
+          <a href="buy.html" class="header__bottom__button">Buy Now</a>
+
+          <div class="header__bottom__hidden">
+            <div class="header__bottom__page-links">
+              <a href="#faq" class="header__bottom__page-link">FAQ</a>
+              <a href="help" class="header__bottom__page-link">Help</a>
+            </div>
+
+            <div class="header__bottom__more">
+              <a href="" class="header__bottom__more-link">More</a>
+              <a href="#language" class="icon icon--lang-arrow"></a>
+            </div>
+
+            <div class="header__bottom__switch">
+
+              <div class="header__bottom__switch__text">
+                <button class="header__bottom__switch-btn header__bottom__switch-btn-left">Previous</button>
+                <button class="header__bottom__switch-btn header__bottom__switch-btn-right">Next</button>
+              </div>
+
+              <div class="header__bottom__switch-line">
+                <div class="header__bottom__switch-progress-1"></div>
+                <div class="header__bottom__switch-progress-2"></div>
+                <div class="header__bottom__switch-progress-3"></div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+
     <script src="src/scripts/main.js"></script>
   </body>
 </html>
