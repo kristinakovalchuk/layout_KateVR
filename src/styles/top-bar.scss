@@ -91,4 +91,30 @@
       padding-block: 34px 46px;
     }
   }
+
+  &__faq{
+    padding-block: 20px 31px;
+
+    @include on-tablet{
+      padding-block: 34px 51px;
+    }
+
+    @include on-desktop{
+      padding-block: 28px 25px;
+      padding-inline: 26px;
+    }
+  }
+
+  &__help{
+    padding-block: 20px 31px;
+
+    @include on-tablet{
+      padding-block: 34px 51px;
+    }
+
+    @include on-desktop{
+      padding-block: 26px 17px;
+      padding-inline: 26px;
+    }
+  }
 }

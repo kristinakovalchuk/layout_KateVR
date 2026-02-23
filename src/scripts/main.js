@@ -45,4 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   showSlide(currentIndex);
+
+
+  const questions = document.querySelectorAll(".faq__question");
+
+  questions.forEach((question) => {
+    question.addEventListener("click", () => {
+      question.classList.toggle("active");
+
+      const icon = question.querySelector(".faq__question__title__icon");
+      icon.classList.toggle("active");
+    });
+  });
+
 });

@@ -6,6 +6,8 @@
 @import './nav';
 @import './top-bar';
 @import './menu';
+@import './faq';
+@import './help';
 
 body {
   min-width: 320px;
@@ -19,11 +21,12 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $bg-line-color transparent;
 }
 
 .container{
   max-width: 1440px;
   margin-inline: auto;
-
   @include padding-inline;
 }
