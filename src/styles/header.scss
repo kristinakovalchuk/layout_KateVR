@@ -118,14 +118,14 @@
       font-size: 16px;
       line-height: 1.5;
       color: $greu-header-color;
-      margin: 0 0 8px;
+      margin: 0 0 10px;
 
       @include on-tablet{
-        margin: 0 0 10px;
+        margin: 0 0 20px;
       }
 
       @include on-desktop{
-        margin: 0 0 5px;
+        margin: 0 0 15px;
       }
     }
 
@@ -152,8 +152,11 @@
       height: 66.05px;
       width: auto;
 
+
       &-link{
-        text-decoration: none
+        display: flex;
+        width: 100%;
+        text-decoration: none;
       }
     }
 

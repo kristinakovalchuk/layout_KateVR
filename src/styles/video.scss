@@ -1,0 +1,72 @@
+/* Приховане модальне вікно за замовчуванням */
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+
+  background-color: rgba($color: #000, $alpha: 0.7);
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  transition: all 0.5s;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  align-items: center;
+  justify-content: center;
+
+  &:target{
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+  }
+
+  &:active {
+    display: flex;
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 900px;
+    background: #000;
+    position: relative;
+    border-radius: 12px;
+  }
+
+  &__video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  &__video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    border: none;
+  }
+
+  &__close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+
+

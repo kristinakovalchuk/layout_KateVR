@@ -1,0 +1,135 @@
+.benefits{
+  background: $bg-gradient;
+  padding-block: 50px;
+
+  @include on-tablet{
+    padding-block: 70px;
+  }
+
+  @include on-desktop{
+    padding-block: 100px 102px;
+  }
+
+  &__title{
+    font-family: Inter, sans-serif;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 1;
+    color: $white-color;
+    margin: 0 0 32px;
+
+    @include on-desktop{
+      margin: 0 0 84px;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    &__blue{
+      color: $main-blue-color;
+      font-weight: 400;
+    }
+  }
+
+  &__content{
+    @include page-grid;
+
+    row-gap: 20px;
+
+    @include on-tablet{
+      row-gap: 0;
+    }
+  }
+
+  &__card{
+    grid-column: 1 / -1;
+    @include hover(transform, scale(1.1));
+
+    @include on-tablet{
+      grid-column: span 2;
+    }
+
+    @include on-desktop{
+      grid-column: span 4;
+    }
+
+    &__img{
+      display: none;
+      margin-inline: auto;
+
+      @include on-tablet{
+        display: flex;
+        margin-bottom: 25.5px;
+      }
+
+      @include on-desktop{
+        margin-bottom: 34px;
+      }
+
+      &-1{
+        width: 80px;
+        height: 80px;
+      }
+
+      &-2{
+        width: 89px;
+        height: 81px;
+      }
+
+      &-3{
+        width: 105px;
+        height: 75px;
+
+        @include on-desktop{
+          width: 111px;
+          height: 79px;
+        }
+      }
+    }
+
+    &__title{
+      font-family: Inter, sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 1;
+      color: $white-color;
+      margin: 0 0 11px;
+
+      @include on-tablet{
+        margin: 0 0 37px;
+        text-align: center;
+      }
+
+      @include on-desktop{
+        margin: 0 0 18px;
+      }
+    }
+
+    &__description{
+      font-family: Inter, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $greu-header-color;
+      margin: 0;
+
+      @include on-tablet{
+        text-align: center;
+      }
+    }
+  }
+
+  &__button{
+    @include button;
+
+    margin-top: 90px;
+    width: 200px;
+    display: none;
+    margin-inline: auto;
+    grid-column: 5 /9;
+
+    @include on-desktop{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

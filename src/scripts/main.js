@@ -2,49 +2,50 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const slides = document.querySelectorAll(
-    ".header__bottom__switch-progress-1, .header__bottom__switch-progress-2, .header__bottom__switch-progress-3"
-  );
+  const switches = document.querySelectorAll(".header__bottom__switch");
 
-  const btnLeft = document.querySelector(".header__bottom__switch-btn-left");
-  const btnRight = document.querySelector(".header__bottom__switch-btn-right");
+  switches.forEach((switchBlock) => {
+    const slides = switchBlock.querySelectorAll(
+      ".header__bottom__switch-progress-1, .header__bottom__switch-progress-2, .header__bottom__switch-progress-3"
+    );
 
-  let currentIndex = 0;
+    const btnLeft = switchBlock.querySelector(".header__bottom__switch-btn-left");
+    const btnRight = switchBlock.querySelector(".header__bottom__switch-btn-right");
 
-  const totalSlides = slides.length;
+    let currentIndex = 0;
+    const totalSlides = slides.length;
 
-  function showSlide(index) {
+    function showSlide(index) {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
 
-    slides.forEach((slide) => {
+      slides[index].classList.add("active");
 
-      slide.classList.remove("active");
+      btnLeft.disabled = index === 0;
+      btnRight.disabled = index === totalSlides - 1;
+    }
+
+    btnRight.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+        showSlide(currentIndex);
+      }
     });
 
-    slides[index].classList.add("active");
+    btnLeft.addEventListener("click", function (e) {
+      e.preventDefault();
 
-    btnLeft.disabled = index === 0;
-    btnRight.disabled = index === totalSlides - 1;
-  }
+      if (currentIndex > 0) {
+        currentIndex--;
+        showSlide(currentIndex);
+      }
+    });
 
-  btnRight.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    if (currentIndex < totalSlides - 1) {
-      currentIndex++;
-      showSlide(currentIndex);
-    }
+    showSlide(currentIndex);
   });
-
-  btnLeft.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    if (currentIndex > 0) {
-      currentIndex--;
-      showSlide(currentIndex);
-    }
-  });
-
-  showSlide(currentIndex);
 
 
   const questions = document.querySelectorAll(".faq__question");

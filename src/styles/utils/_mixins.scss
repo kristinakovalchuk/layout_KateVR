@@ -17,12 +17,6 @@
   }
 }
 
-// @mixin on-desktop-plus {
-//   @media (min-width: $desktop-plus-min-widtx) {
-//     @content;
-//   }
-// }
-
 @mixin padding-inline {
   padding-inline: 20px;
 
@@ -53,10 +47,6 @@
 
     column-gap: 30px;
   }
-
-  // @include on-desktop-plus {
-  //   --columns: 16;
-  // }
 }
 
 @mixin button{
