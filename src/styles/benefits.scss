@@ -1,6 +1,6 @@
 .benefits{
-  background: $bg-gradient;
   padding-block: 50px;
+  background: $bg-gradient;
 
   @include on-tablet{
     padding-block: 70px;
@@ -11,12 +11,13 @@
   }
 
   &__title{
+    margin: 0 0 32px;
+
     font-family: Inter, sans-serif;
-    font-weight: 900;
     font-size: 21px;
+    font-weight: 900;
     line-height: 1;
     color: $white-color;
-    margin: 0 0 32px;
 
     @include on-desktop{
       margin: 0 0 84px;
@@ -25,8 +26,8 @@
     }
 
     &__blue{
-      color: $main-blue-color;
       font-weight: 400;
+      color: $main-blue-color;
     }
   }
 
@@ -42,6 +43,7 @@
 
   &__card{
     grid-column: 1 / -1;
+
     @include hover(transform, scale(1.1));
 
     @include on-tablet{
@@ -87,12 +89,13 @@
     }
 
     &__title{
+      margin: 0 0 11px;
+
       font-family: Inter, sans-serif;
-      font-weight: 900;
       font-size: 16px;
+      font-weight: 900;
       line-height: 1;
       color: $white-color;
-      margin: 0 0 11px;
 
       @include on-tablet{
         margin: 0 0 37px;
@@ -105,12 +108,13 @@
     }
 
     &__description{
+      margin: 0;
+
       font-family: Inter, sans-serif;
-      font-weight: 400;
       font-size: 16px;
+      font-weight: 400;
       line-height: 1.5;
       color: $greu-header-color;
-      margin: 0;
 
       @include on-tablet{
         text-align: center;
@@ -121,11 +125,12 @@
   &__button{
     @include button;
 
-    margin-top: 90px;
-    width: 200px;
     display: none;
-    margin-inline: auto;
     grid-column: 5 /9;
+
+    width: 200px;
+    margin-top: 90px;
+    margin-inline: auto;
 
     @include on-desktop{
       display: flex;

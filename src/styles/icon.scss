@@ -1,7 +1,7 @@
 .icon{
+  display: flex;
   width: 10px;
   height: 10px;
-  display: flex;
   background-repeat: no-repeat;
 
 
@@ -13,6 +13,7 @@
     width: 20px;
     height: 10px;
     background-image: url('../images/icon/kate-menu.svg');
+
     @include hover(transform, scale(1.2));
 
     @include on-tablet{
@@ -29,6 +30,7 @@
     width: 17px;
     height: 17px;
     background-image: url('../images/icon/icon-close-kat.svg');
+
     @include hover(transform, scale(1.2));
   }
 
@@ -64,13 +66,15 @@
   }
 
   &--tech-plus{
+    cursor: pointer;
+
     width: 12px;
     height: 12px;
     border: none;
-    outline: none;
-    cursor: pointer;
+
     background-color: $main-blue-color;
     background-image: url('../images/tech/tech-plus-kat.svg');
+    outline: none;
 
     @include on-tablet{
       width: 16px;
@@ -78,15 +82,15 @@
     }
 
     &:focus {
-      background-image: url('../images/tech/tech-minus.svg');
       height: 1px;
+      background-image: url('../images/tech/tech-minus.svg');
     }
 
 
     @include on-tablet{
-      background-size: 22px;
       width: 22px;
       height: 22px;
+      background-size: 22px;
     }
 
     @include on-desktop{
@@ -98,6 +102,7 @@
     width: 8px;
     height: 15px;
     background-image: url('../images/contact/facebook-kat.svg');
+
     @include hover(transform, scale(1.2));
   }
 
@@ -105,6 +110,7 @@
     width: 19px;
     height: 14px;
     background-image: url('../images/contact/twitter-kat.svg');
+
     @include hover(transform, scale(1.2));
   }
 
@@ -112,6 +118,7 @@
     width: 18px;
     height: 14px;
     background-image: url('../images/contact/youtube-kat.svg');
+
     @include hover(transform, scale(1.2));
   }
 
@@ -119,33 +126,37 @@
     width: 18px;
     height: 18px;
     background-image: url('../images/contact/redit-kat.svg');
+
     @include hover(transform, scale(1.2));
   }
 
   &--arrow {
-    width: 48px;
-    height: 48px;
-    border: 1px solid $main-blue-color;
-    border-radius: 50%;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    width: 48px;
+    height: 48px;
+    border: 1px solid $main-blue-color;
+    border-radius: 50%;
+
     background-image: url('../images/contact/arrow.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 15.3px 8.6px;
-    cursor: pointer;
 
     transition: all 0.3s;
 
     &:hover {
+      transform: scale(1.2);
+
       width: 48px;
       height: 48px;
-      transform: scale(1.2);
-      background-image: url('../images/contact/arrow-white.svg');
+
       background-color: $main-blue-color;
+      background-image: url('../images/contact/arrow-white.svg');
     }
   }
 
