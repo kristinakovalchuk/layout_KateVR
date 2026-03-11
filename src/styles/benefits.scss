@@ -1,16 +1,16 @@
-.benefits{
+.benefits {
   padding-block: 50px;
   background: $bg-gradient;
 
-  @include on-tablet{
+  @include on-tablet {
     padding-block: 70px;
   }
 
-  @include on-desktop{
+  @include on-desktop {
     padding-block: 100px 102px;
   }
 
-  &__title{
+  &__title {
     margin: 0 0 32px;
 
     font-family: Inter, sans-serif;
@@ -19,76 +19,76 @@
     line-height: 1;
     color: $white-color;
 
-    @include on-desktop{
+    @include on-desktop {
       margin: 0 0 84px;
       font-size: 36px;
       text-align: center;
     }
 
-    &__blue{
+    &__blue {
       font-weight: 400;
       color: $main-blue-color;
     }
   }
 
-  &__content{
+  &__content {
     @include page-grid;
 
     row-gap: 20px;
 
-    @include on-tablet{
+    @include on-tablet {
       row-gap: 0;
     }
   }
 
-  &__card{
+  &__card {
     grid-column: 1 / -1;
 
     @include hover(transform, scale(1.1));
 
-    @include on-tablet{
+    @include on-tablet {
       grid-column: span 2;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       grid-column: span 4;
     }
 
-    &__img{
+    &__img {
       display: none;
       margin-inline: auto;
 
-      @include on-tablet{
+      @include on-tablet {
         display: flex;
         margin-bottom: 25.5px;
       }
 
-      @include on-desktop{
+      @include on-desktop {
         margin-bottom: 34px;
       }
 
-      &-1{
+      &-1 {
         width: 80px;
         height: 80px;
       }
 
-      &-2{
+      &-2 {
         width: 89px;
         height: 81px;
       }
 
-      &-3{
+      &-3 {
         width: 105px;
         height: 75px;
 
-        @include on-desktop{
+        @include on-desktop {
           width: 111px;
           height: 79px;
         }
       }
     }
 
-    &__title{
+    &__title {
       margin: 0 0 11px;
 
       font-family: Inter, sans-serif;
@@ -97,17 +97,17 @@
       line-height: 1;
       color: $white-color;
 
-      @include on-tablet{
+      @include on-tablet {
         margin: 0 0 37px;
         text-align: center;
       }
 
-      @include on-desktop{
+      @include on-desktop {
         margin: 0 0 18px;
       }
     }
 
-    &__description{
+    &__description {
       margin: 0;
 
       font-family: Inter, sans-serif;
@@ -116,13 +116,13 @@
       line-height: 1.5;
       color: $greu-header-color;
 
-      @include on-tablet{
+      @include on-tablet {
         text-align: center;
       }
     }
   }
 
-  &__button{
+  &__button {
     @include button;
 
     display: none;
@@ -132,7 +132,7 @@
     margin-top: 90px;
     margin-inline: auto;
 
-    @include on-desktop{
+    @include on-desktop {
       display: flex;
       justify-content: center;
     }

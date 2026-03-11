@@ -20,9 +20,11 @@
   background-color: rgba($color: #000, $alpha: 0.7);
 
   transition: all 0.5s;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 
-  &:target{
+  &:target {
     pointer-events: all;
     transform: scale(1);
     opacity: 1;
@@ -74,6 +76,3 @@
     background: none;
   }
 }
-
-
-

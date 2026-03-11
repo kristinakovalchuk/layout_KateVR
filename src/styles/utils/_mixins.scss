@@ -49,7 +49,7 @@
   }
 }
 
-@mixin button{
+@mixin button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,13 +69,13 @@
 
   transition: all 0.3s;
 
-  &:hover{
-    color: $main-blue-color ;
+  &:hover {
+    color: $main-blue-color;
     background-color: $white-color;
   }
 }
 
-@mixin select{
+@mixin select {
   cursor: pointer;
 
   height: 41px;

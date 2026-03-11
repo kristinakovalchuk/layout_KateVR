@@ -1,25 +1,24 @@
-.tech{
+.tech {
   max-width: 1440px;
   margin-inline: auto;
   padding-block: 50px;
 
-  @include on-tablet{
+  @include on-tablet {
     padding-block: 80px;
   }
 
-  @include on-desktop{
+  @include on-desktop {
     height: 481px;
     padding-block: 100px;
   }
 
-  &__content{
+  &__content {
     @include page-grid;
 
     position: relative;
-
   }
 
-  &__title{
+  &__title {
     display: flex;
     grid-column: 1 /-1;
     grid-row: 1;
@@ -32,17 +31,17 @@
     line-height: 1;
     color: $white-color;
 
-    @include on-tablet{
+    @include on-tablet {
       margin: 0 0 80px;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       grid-column: 9 /-1;
       margin: 0 0 80px;
       font-size: 36px;
     }
 
-    &-blue{
+    &-blue {
       margin: 0;
       padding-left: 10px;
       font-weight: 400;
@@ -50,17 +49,16 @@
     }
   }
 
-  &__photo{
+  &__photo {
     display: flex;
     grid-column: 1 /-1;
     margin-inline: auto;
 
-
-    @include on-tablet{
+    @include on-tablet {
       grid-column: 2 /6;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       position: absolute;
       z-index: -5;
 
@@ -70,22 +68,22 @@
       margin-top: 61px;
     }
 
-    &__img{
+    &__img {
       width: 197px;
       height: 195px;
 
-      @include on-tablet{
+      @include on-tablet {
         width: 358px;
         height: 354px;
       }
 
-      @include on-desktop{
+      @include on-desktop {
         width: 297px;
         height: 294px;
       }
     }
 
-    &__ellips{
+    &__ellips {
       position: absolute;
       top: 38px;
       left: -15px;
@@ -96,16 +94,14 @@
       width: 50px;
       height: 201px;
 
-      @include on-desktop{
+      @include on-desktop {
         display: flex;
       }
-
     }
   }
 
-  &__blok{
-
-    &-1{
+  &__blok {
+    &-1 {
       position: absolute;
       top: 40px;
       right: 0;
@@ -121,8 +117,7 @@
 
       background-color: $main-blue-color;
 
-
-      @include on-tablet{
+      @include on-tablet {
         top: 80px;
         right: 50px;
 
@@ -132,7 +127,7 @@
         height: 61px;
       }
 
-      @include on-desktop{
+      @include on-desktop {
         position: relative;
         top: 0;
         right: 0;
@@ -146,8 +141,8 @@
         height: auto;
       }
 
-      &__text{
-        @include on-desktop{
+      &__text {
+        @include on-desktop {
           position: absolute;
           left: 50px;
         }
@@ -157,7 +152,7 @@
         width: 197px;
         height: 195px;
 
-        @include on-desktop{
+        @include on-desktop {
           position: absolute;
           top: 5px;
           left: 65px;
@@ -170,7 +165,7 @@
       }
     }
 
-    &-2{
+    &-2 {
       position: absolute;
       top: 130px;
       left: 20px;
@@ -186,7 +181,7 @@
 
       background-color: $main-blue-color;
 
-      @include on-tablet{
+      @include on-tablet {
         top: 250px;
         left: 60px;
 
@@ -196,7 +191,7 @@
         height: 61px;
       }
 
-      @include on-desktop{
+      @include on-desktop {
         position: relative;
         top: 0;
         left: 0;
@@ -210,17 +205,15 @@
         height: auto;
       }
 
-      &__text{
-
-        @include on-desktop{
+      &__text {
+        @include on-desktop {
           position: absolute;
           left: 160px;
         }
       }
 
       &__img {
-
-        @include on-desktop{
+        @include on-desktop {
           position: absolute;
           top: 5px;
           left: -55px;
@@ -228,7 +221,7 @@
       }
     }
 
-    &-3{
+    &-3 {
       position: absolute;
       top: 195px;
       right: 80px;
@@ -244,7 +237,7 @@
 
       background-color: $main-blue-color;
 
-      @include on-tablet{
+      @include on-tablet {
         top: 360px;
         left: -130px;
 
@@ -254,7 +247,7 @@
         height: 61px;
       }
 
-      @include on-desktop{
+      @include on-desktop {
         position: relative;
         top: 220px;
         left: 0;
@@ -269,17 +262,15 @@
         background-color: transparent;
       }
 
-      &__text{
-
-        @include on-desktop{
+      &__text {
+        @include on-desktop {
           position: absolute;
           left: 130px;
         }
       }
 
       &__img {
-
-        @include on-desktop{
+        @include on-desktop {
           position: absolute;
           top: -100px;
           right: 180px;
@@ -287,7 +278,7 @@
       }
     }
 
-    &__title{
+    &__title {
       display: none;
 
       margin: 0 0 21px;
@@ -298,13 +289,13 @@
       line-height: 1;
       color: $white-color;
 
-      @include on-desktop{
+      @include on-desktop {
         display: flex;
         font-size: 18px;
       }
     }
 
-    &__description{
+    &__description {
       margin: 0;
 
       font-family: Inter, sans-serif;
@@ -313,27 +304,27 @@
       line-height: 1.5;
       color: $greu-header-color;
 
-      @include on-tablet{
+      @include on-tablet {
         font-size: 13px;
       }
 
-      @include on-desktop{
+      @include on-desktop {
         font-size: 16px;
       }
     }
 
-    &__img{
+    &__img {
       display: none;
 
-      @include on-desktop{
+      @include on-desktop {
         display: flex;
       }
     }
 
-    &__text{
+    &__text {
       display: none;
 
-      @include on-desktop{
+      @include on-desktop {
         display: flex;
         flex-direction: column;
       }
@@ -342,7 +333,6 @@
 }
 
 @media (max-width: 1440px) {
-
   .tech__blok-1,
   .tech__blok-2,
   .tech__blok-3 {
@@ -350,13 +340,13 @@
     box-sizing: border-box;
     outline: none;
 
-    &:focus-within{
+    &:focus-within {
       border: 3px solid rgba(#fff, 0.14);
-      background-color: #07798B;
+      background-color: #07798b;
     }
   }
 
-  .tech__blok-1__text{
+  .tech__blok-1__text {
     position: absolute;
     z-index: 10;
     top: 40px;
@@ -370,7 +360,7 @@
 
     background: $auxiliary-windows-color;
 
-    @include on-tablet{
+    @include on-tablet {
       top: 80px;
       right: 10px;
       width: 168px;
@@ -392,7 +382,7 @@
 
     background: $auxiliary-windows-color;
 
-    @include on-tablet{
+    @include on-tablet {
       top: 75px;
       left: -110px;
       width: 260px;
@@ -414,7 +404,7 @@
 
     background: $auxiliary-windows-color;
 
-    @include on-tablet{
+    @include on-tablet {
       top: 10px;
       left: 80px;
       width: 180px;

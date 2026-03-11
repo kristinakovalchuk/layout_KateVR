@@ -1,5 +1,5 @@
-.nav{
-  &__menu{
+.nav {
+  &__menu {
     display: flex;
     flex-direction: row;
     gap: 37px;
@@ -8,7 +8,7 @@
     margin: 0;
   }
 
-  &__list{
+  &__list {
     display: flex;
     gap: 36px;
 
@@ -18,10 +18,10 @@
     list-style: none;
   }
 
-  &__link{
+  &__link {
     margin: 0;
 
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.3;

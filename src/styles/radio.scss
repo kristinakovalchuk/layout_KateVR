@@ -6,9 +6,18 @@
   }
 }
 
-[id='step1']:checked ~ .buy-header .buy-header__bottom .buy-header__bottom__pages:nth-child(1),
-[id='step2']:checked ~ .buy-header .buy-header__bottom .buy-header__bottom__pages:nth-child(2),
-[id='step3']:checked ~ .buy-header .buy-header__bottom .buy-header__bottom__pages:nth-child(3) {
+[id='step1']:checked
+  ~ .buy-header
+  .buy-header__bottom
+  .buy-header__bottom__pages:nth-child(1),
+[id='step2']:checked
+  ~ .buy-header
+  .buy-header__bottom
+  .buy-header__bottom__pages:nth-child(2),
+[id='step3']:checked
+  ~ .buy-header
+  .buy-header__bottom
+  .buy-header__bottom__pages:nth-child(3) {
   color: $main-blue-color;
   opacity: 1;
 }
@@ -62,6 +71,7 @@
 
 .btn-next {
   @include button;
+
   width: 100%;
   height: 40px;
   margin-block: 40px;

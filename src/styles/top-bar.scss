@@ -1,4 +1,4 @@
-.top-bar{
+.top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,51 +6,51 @@
   width: 100&;
   padding-block: 20px 15px;
 
-  @include on-tablet{
+  @include on-tablet {
     padding-block: 32px 0;
   }
 
-  @include on-desktop{
+  @include on-desktop {
     justify-content: left;
     padding-block: 47px 0;
   }
 
-  &__logo{
+  &__logo {
     width: 58px;
     height: 12px;
 
-    @include on-tablet{
+    @include on-tablet {
       width: 67px;
       height: 14px;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       width: 77px;
       height: 16px;
     }
 
-    &-link{
+    &-link {
       padding-right: 34.5px;
     }
   }
 
-  &__hidden{
+  &__hidden {
     display: none;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 
-    @include on-desktop{
+    @include on-desktop {
       display: flex;
     }
   }
 
-  &__lang-switcher{
+  &__lang-switcher {
     display: flex;
     gap: 4px;
     align-items: end;
 
-    &__text{
+    &__text {
       margin: 0;
 
       font-family: Inter, sans-serif;
@@ -64,57 +64,57 @@
     }
   }
 
-  &__button{
+  &__button {
     @include button;
 
     width: 200px;
   }
 
-  &__menu{
+  &__menu {
     display: flex;
     justify-content: end;
     padding-block: 20px 38px;
 
     @include padding-inline;
 
-    @include on-tablet{
+    @include on-tablet {
       padding-block: 34px 46px;
     }
   }
 
-  &__language{
+  &__language {
     display: flex;
     justify-content: start;
     padding-block: 20px 38px;
 
     @include padding-inline;
 
-    @include on-tablet{
+    @include on-tablet {
       padding-block: 34px 46px;
     }
   }
 
-  &__faq{
+  &__faq {
     padding-block: 20px 31px;
 
-    @include on-tablet{
+    @include on-tablet {
       padding-block: 34px 51px;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       padding-block: 28px 25px;
       padding-inline: 26px;
     }
   }
 
-  &__help{
+  &__help {
     padding-block: 20px 31px;
 
-    @include on-tablet{
+    @include on-tablet {
       padding-block: 34px 51px;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       padding-block: 26px 17px;
       padding-inline: 26px;
     }

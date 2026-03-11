@@ -1,45 +1,43 @@
-.buy{
-
-  &-main{
+.buy {
+  &-main {
     width: 100%;
     min-height: 100vh;
     background: $bg-gradient;
   }
 
-  &__html{
+  &__html {
     background: $bg-gradient;
   }
 
-  &-top-bar{
+  &-top-bar {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding-block: 20px 33px;
 
-    @include on-tablet{
+    @include on-tablet {
       padding-block: 30px;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       padding-block: 40px;
     }
   }
 
-  &-header{
+  &-header {
     display: flex;
     flex-direction: column;
     width: 100%;
 
-    &__bottom{
+    &__bottom {
       display: flex;
       justify-content: space-between;
       margin: 0;
-      margin-inline: -20px ;
+      margin-inline: -20px;
 
-      @include on-tablet{
+      @include on-tablet {
         margin-inline: -34px;
       }
-
 
       &__pages {
         position: relative;
@@ -88,26 +86,24 @@
           }
         }
 
-        @include on-tablet{
+        @include on-tablet {
           font-size: 14px;
         }
       }
     }
   }
 
-  &-content{
-
-    &__block-1{
-      &__content{
-
-        @include on-desktop{
+  &-content {
+    &__block-1 {
+      &__content {
+        @include on-desktop {
           @include page-grid;
 
           overflow: hidden;
         }
       }
 
-      &__photo{
+      &__photo {
         display: none;
         grid-column: 1 / 7;
 
@@ -119,11 +115,11 @@
 
         object-fit: cover;
 
-        @include on-tablet{
+        @include on-tablet {
           display: flex;
         }
 
-        @include on-desktop{
+        @include on-desktop {
           position: absolute;
           display: flex;
           height: 279px;
@@ -131,27 +127,27 @@
         }
       }
 
-      &__right{
+      &__right {
         display: flex;
         grid-column: 7/ -1;
         grid-row: 1 / 3;
         flex-direction: column;
         gap: 30px;
 
-        @include on-tablet{
+        @include on-tablet {
           --columns: 6;
 
           display: grid;
           grid-template-columns: repeat(var(--columns), 1fr);
           gap: 30px 20px;
 
-          @include on-desktop{
+          @include on-desktop {
             row-gap: 40px;
           }
         }
       }
 
-      &__amount-prise{
+      &__amount-prise {
         display: flex;
         grid-column: 1 / -1;
         grid-row: 2;
@@ -161,11 +157,11 @@
 
         margin-bottom: 30px;
 
-        @include on-tablet{
+        @include on-tablet {
           justify-content: left;
         }
 
-        &__text{
+        &__text {
           margin: 0 0 10px;
 
           font-family: Inter, sans-serif;
@@ -175,7 +171,7 @@
           color: $greu-header-color;
         }
 
-        &__number{
+        &__number {
           margin: 0;
 
           font-family: Inter, sans-serif;
@@ -233,29 +229,29 @@
         }
       }
 
-      &__choises{
+      &__choises {
         display: flex;
         flex-direction: column;
         column-gap: 30px;
         width: 100%;
 
-        @include on-tablet{
+        @include on-tablet {
           flex-direction: row;
         }
       }
 
-      &__region{
+      &__region {
         width: 100%;
 
-        &__select{
+        &__select {
           width: 100%;
 
-          @include on-tablet{
+          @include on-tablet {
             min-width: 100%;
           }
         }
 
-        &__text{
+        &__text {
           margin: 0 0 17px;
 
           font-family: Inter, sans-serif;
@@ -266,40 +262,38 @@
         }
       }
 
-      &__group{
+      &__group {
         margin-bottom: 0;
 
-        &--left{
+        &--left {
           grid-column: 1 / 4;
         }
 
-        &--right{
+        &--right {
           grid-column: 4 / -1;
         }
       }
-
     }
 
-    &__block-2{
+    &__block-2 {
+      &__card-img {
+        display: none;
 
-      &__card-img{
-        display:  none;
-
-        @include on-tablet{
+        @include on-tablet {
           display: flex;
         }
       }
 
-      &__amount-prise{
+      &__amount-prise {
         display: flex;
         justify-content: center;
 
-        @include on-desktop{
+        @include on-desktop {
           justify-content: start;
         }
       }
 
-      &__right{
+      &__right {
         display: flex;
         grid-column: 7 / 12;
         flex-direction: column;
@@ -309,22 +303,22 @@
         max-width: 560px;
         margin-inline: auto;
 
-        @include on-desktop{
+        @include on-desktop {
           row-gap: 40px;
         }
       }
 
-      &__card-inputs{
+      &__card-inputs {
         display: flex;
         gap: 30px;
       }
 
-      &__card-row{
+      &__card-row {
         display: flex;
         gap: 30px;
       }
 
-      &__card-number{
+      &__card-number {
         width: 65px;
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -343,18 +337,17 @@
           color: rgba(255, 255, 255, 0.28);
         }
 
-        &:focus{
+        &:focus {
           border-bottom-color: $main-blue-color;
         }
 
-        @include on-tablet{
+        @include on-tablet {
           width: 80px;
           font-size: 21px;
         }
-
       }
 
-      &__label{
+      &__label {
         display: block;
 
         margin: 0 0 17px;
@@ -365,7 +358,7 @@
         color: $main-blue-color;
       }
 
-      &__input{
+      &__input {
         width: 100%;
         border: none;
         border-bottom: 1px solid $input-border-color;
@@ -379,16 +372,16 @@
         background-color: transparent;
         outline: none;
 
-        &-1{
+        &-1 {
           width: 90px;
         }
 
-        &-2{
+        &-2 {
           width: 50px;
         }
       }
 
-      &__bottom{
+      &__bottom {
         --columns: 6;
 
         display: grid;
@@ -396,14 +389,13 @@
         gap: 30px 20px;
       }
 
-      &__group{
+      &__group {
         grid-column: span 3;
       }
     }
 
-    &__block-3{
-
-      &__title{
+    &__block-3 {
+      &__title {
         width: 100%;
         margin: 0 0 20px;
 
@@ -415,17 +407,17 @@
         text-align: center;
         text-transform: uppercase;
 
-        &__blue{
+        &__blue {
           font-weight: 400;
           color: $main-blue-color;
         }
 
-        @include on-tablet{
+        @include on-tablet {
           font-size: 46px;
         }
       }
 
-      &__description{
+      &__description {
         margin: 0 0 50px;
 
         font-family: Inter, sans-serif;
@@ -436,13 +428,13 @@
         text-align: center;
       }
 
-      &__button{
+      &__button {
         @include button;
 
         width: 100%;
         height: 40px;
 
-        @include on-tablet{
+        @include on-tablet {
           width: 458px;
           height: 48px;
           margin-inline: auto;
@@ -451,5 +443,3 @@
     }
   }
 }
-
-
