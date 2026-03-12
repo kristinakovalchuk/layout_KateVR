@@ -12,10 +12,10 @@
   }
 
   &__bottom {
-    @include page-grid;
-
     position: relative;
     width: 100%;
+
+    @include page-grid;
 
     @include on-tablet {
       padding-top: 55px;
@@ -165,12 +165,12 @@
     }
 
     &__button {
-      @include button;
-
       position: absolute;
       bottom: -20px;
       height: 40px;
       box-shadow: 4px 4px 4px 0 #000000ad;
+
+      @include button;
 
       @include on-tablet {
         position: static;

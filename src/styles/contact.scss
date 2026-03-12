@@ -10,10 +10,10 @@
   }
 
   &__content {
-    @include page-grid;
-
     position: relative;
     align-self: start;
+
+    @include page-grid;
   }
 
   &__question {
@@ -81,11 +81,11 @@
   }
 
   &__button {
-    @include button;
-
     width: 100%;
     margin-bottom: 30px;
     border: none;
+
+    @include button;
 
     @include on-tablet {
       width: 200px;

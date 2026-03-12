@@ -1,8 +1,8 @@
 .help {
   &__content {
-    @include page-grid;
-
     padding-bottom: 73px;
+
+    @include page-grid;
 
     @include on-tablet {
       padding-bottom: 124px;

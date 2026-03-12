@@ -429,10 +429,10 @@
       }
 
       &__button {
-        @include button;
-
         width: 100%;
         height: 40px;
+
+        @include button;
 
         @include on-tablet {
           width: 458px;

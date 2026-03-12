@@ -32,9 +32,9 @@
   }
 
   &__content {
-    @include page-grid;
-
     row-gap: 20px;
+
+    @include page-grid;
 
     @include on-tablet {
       row-gap: 0;
@@ -123,14 +123,14 @@
   }
 
   &__button {
-    @include button;
-
     display: none;
     grid-column: 5 /9;
 
     width: 200px;
     margin-top: 90px;
     margin-inline: auto;
+
+    @include button;
 
     @include on-desktop {
       display: flex;
