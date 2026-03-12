@@ -44,7 +44,7 @@
   &__card {
     grid-column: 1 / -1;
 
-    @include hover(transform, scale(1.1));
+    @include hover(transform, scale(1.03));
 
     @include on-tablet {
       grid-column: span 2;
@@ -124,16 +124,35 @@
 
   &__button {
     display: none;
-    grid-column: 5 /9;
+    grid-column: 3 /5;
+    align-items: center;
+    justify-content: center;
 
     width: 200px;
+    height: 48px;
     margin-top: 90px;
     margin-inline: auto;
+    border-radius: 4px;
 
-    @include button;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: $white-color;
+    text-decoration: none;
+
+    background-color: $main-blue-color;
+
+    transition: all 0.3s;
+
+    &:hover {
+      color: $main-blue-color;
+      background-color: $white-color;
+    }
 
     @include on-desktop {
       display: flex;
+      grid-column: 5 / 9;
       justify-content: center;
     }
   }

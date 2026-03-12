@@ -69,7 +69,7 @@
 
     width: 100%;
 
-    @include hover(transform, scale(1.1));
+    @include hover(transform, scale(1.03));
 
     @include on-tablet {
       grid-column: span 3;
