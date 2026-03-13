@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>KatVR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/layout_KateVR/assets/kate-fav-DeLA9Jw5.svg" type="image/x-icon">
+    <script type="module" crossorigin src="/layout_KateVR/assets/index-DXesBikY.js"></script>
+    <link rel="stylesheet" crossorigin href="/layout_KateVR/assets/index-DPY_WKfW.css">
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+
+        <div class="top-bar">
+          <a href="#" class="top-bar__logo-link">
+            <img
+              src="data:image/svg+xml,%3csvg%20width='48'%20height='10'%20viewBox='0%200%2048%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3crect%20width='48'%20height='10'%20fill='url(%23pattern0_1_4167)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_1_4167'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_1_4167'%20transform='matrix(0.0094697%200%200%200.0454545%20-0.00662879%200)'/%3e%3c/pattern%3e%3cimage%20id='image0_1_4167'%20width='107'%20height='22'%20preserveAspectRatio='none'%20xlink:href='data:image/png;base64,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'/%3e%3c/defs%3e%3c/svg%3e"
+              alt="logo"
+              class="top-bar__logo">
+          </a>
+
+          <div class="top-bar__hidden">
+
+            <div class="top-bar__lang-switcher lang-switcher">
+              <details class="lang-switcher__details">
+                <summary class="lang-switcher__summary">
+                  <span class="lang-switcher__current">En</span>
+                  <span class="lang-switcher__arrow"></span>
+                </summary>
+
+                <div class="lang-switcher__dropdown">
+                  <a href="#" class="lang-switcher__option lang-switcher__option--active">En</a>
+                  <a href="#" class="lang-switcher__option">Ua</a>
+                  <a href="#" class="lang-switcher__option">Pl</a>
+                </div>
+              </details>
+            </div>
+
+            <nav class="nav__menu">
+              <ul class="nav__list">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#tech" class="nav__link">Tech</a></li>
+                <li><a href="#benefits" class="nav__link">Benefits</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+              </ul>
+
+              <a href="#buy-modal" class="top-bar__button">Buy Now</a>
+            </nav>
+          </div>
+
+          <a href="#menu" class="icon icon--menu"></a>
+        </div>
+
+        <div class="header__bottom">
+
+          <img
+            src="/layout_KateVR/assets/kat-header-img-CuSwFuIM.svg"
+            alt="img"
+            class="header__bottom__img">
+
+          <div class="header__bottom__title">
+            <p class="header__bottom__title-white">THE NEW START OF</p>
+            <p class="header__bottom__title-blue">VR LOCOMOTION</p>
+          </div>
+
+          <div class="header__bottom__description">
+            <p class="header__bottom__desc-text">
+              Discover the most comprehensive VR Locomotion system, and unlock infinite motion in any games on any platforms!
+            </p>
+
+            <p class="header__bottom__prise">1200$</p>
+
+            <a href="#videoModal" class="header__bottom__play-link">
+              <img
+                src="/layout_KateVR/assets/video-play-_uw9abpJ.svg"
+                alt="photo-button"
+                class="header__bottom__play">
+            </a>
+          </div>
+
+          <div class="header__bottom__button-wrapper"><a href="#buy-modal" class="header__bottom__button">Buy Now</a></div>
+
+          <div class="header__bottom__hidden">
+            <div class="header__bottom__page-links">
+              <a href="#faq" class="header__bottom__page-link">FAQ</a>
+              <a href="#help" class="header__bottom__page-link">Help</a>
+            </div>
+
+            <div class="header__bottom__more">
+              <a href="" class="header__bottom__more-link">More</a>
+              <a href="#lang" class="icon icon--lang-arrow"></a>
+            </div>
+
+            <div class="header__bottom__switch">
+
+              <div class="header__bottom__switch__text">
+                <button class="header__bottom__switch-btn header__bottom__switch-btn-left">Previous</button>
+                <button class="header__bottom__switch-btn header__bottom__switch-btn-right">Next</button>
+              </div>
+
+              <div class="header__bottom__switch-line">
+                <div class="header__bottom__switch-progress-1"></div>
+                <div class="header__bottom__switch-progress-2"></div>
+                <div class="header__bottom__switch-progress-3"></div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="menu" id="menu">
+      <div class="menu__content">
+        <div class="menu__wrapper">
+          <div class="top-bar__menu">
+            <a href="#" class="icon icon--close"></a>
+          </div>
+          <nav class="menu__nav__menu">
+            <ul class="menu__nav__list">
+              <li class="menu__nav__item"><a href="#about" class="nav__link menu__nav__link">About</a></li>
+              <li class="menu__nav__item"><a href="#tech" class="nav__link menu__nav__link">Tech</a></li>
+              <li class="menu__nav__item"><a href="#benefits" class="nav__link menu__nav__link">Benefits</a></li>
+              <li class="menu__nav__item"><a href="#contact" class="nav__link menu__nav__link">Contact</a></li>
+              <li class="menu__nav__item"><a href="#lang" class="nav__link menu__nav__link">Language</a></li>
+              <li class="menu__nav__item"><a href="#faq" class="nav__link menu__nav__link">FAQ</a></li>
+              <li class="menu__nav__item"><a href="#help" class="nav__link menu__nav__link">Help</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </aside>
+
+    <div class="menu menu__language" id="lang">
+      <div class="menu__language__content menu__content">
+
+        <div class="top-bar__language">
+          <a href="#" class="icon icon--arrow-turn-back"></a>
+        </div>
+
+        <nav class="menu__nav__menu">
+          <ul class="menu__nav__list">
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">English</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">Arabic</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">Chinese (Simplified)</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">Chinese (Traditional)</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">French</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">German</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">Italian</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">Polish</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">Russian</a></li>
+            <li class="menu__nav__item"><a href="" class="nav__link menu__nav__link">Ukrainian</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="faq" id="faq">
+
+      <div class=" faq__content">
+
+        <div class="top-bar__menu top-bar__faq">
+          <a href="#" class="icon icon--close"></a>
+        </div>
+
+          <div class="faq__wrapper">
+            <div class="faq__title">
+              <p class="faq__title-white">FREQUENTLY ASKED</p>
+              <p class="faq__title-blue">QUESTIONS</p>
+            </div>
+
+            <div class="faq__questions">
+              <div class="faq__question">
+                <button class="faq__question__title">
+                  <span class="faq__question__title__text">
+                    What makes KAT loco different from other systems?
+                  </span>
+
+                  <span class="icon icon--lang-arrow faq__question__title__icon"></span>
+                </button>
+
+                <div class="faq__question__content">
+                  <p class="faq__question__description">
+                    Despite being approached from many different angles, all traditional VR Locomotion systems including roomscale, teleportation, and free locomotion failed to provide an optimal solution capable of integrating high immersion with convenience. KAT loco does all of that without repeating their flaws. Our system offers a complete and versatile solution for an affordable price what makes it a perfect choice for home-use. It is also 100% user friendly, wireless, universally compatible, and more! It even offers decoupled head and body directions!
+                  </p>
+                  <p class="faq__question__footer-text">
+                    Last updated: Wed, June 12 2019 7:07 PM UTC +03:00
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq__question">
+                <button class="faq__question__title">
+                  <span class="faq__question__title__text">
+                    Will it decrease my motion sickness?
+                  </span>
+
+                  <span class="icon icon--lang-arrow faq__question__title__icon"></span>
+                </button>
+                <div class="faq__question__content">
+                  <p class="faq__question__description">
+                    Despite being approached from many different angles, all traditional VR Locomotion systems including roomscale, teleportation, and free locomotion failed to provide an optimal solution capable of integrating high immersion with convenience. KAT loco does all of that without repeating their flaws. Our system offers a complete and versatile solution for an affordable price what makes it a perfect choice for home-use. It is also 100% user friendly, wireless, universally compatible, and more! It even offers decoupled head and body directions!
+                  </p>
+                  <p class="faq__question__footer-text">
+                    Last updated: Wed, June 12 2019 7:07 PM UTC +03:00
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq__question">
+                <button class="faq__question__title">
+                  <span class="faq__question__title__text">
+                    Which VR headsets is it compatible with?
+                  </span>
+
+                  <span class="icon icon--lang-arrow faq__question__title__icon"></span>
+                </button>
+
+                <div class="faq__question__content">
+                  <p class="faq__question__description">
+                    Despite being approached from many different angles, all traditional VR Locomotion systems including roomscale, teleportation, and free locomotion failed to provide an optimal solution capable of integrating high immersion with convenience. KAT loco does all of that without repeating their flaws. Our system offers a complete and versatile solution for an affordable price what makes it a perfect choice for home-use. It is also 100% user friendly, wireless, universally compatible, and more! It even offers decoupled head and body directions!
+                  </p>
+                  <p class="faq__question__footer-text">
+                    Last updated: Wed, June 12 2019 7:07 PM UTC +03:00
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq__question">
+                <button class="faq__question__title">
+                  <span class="faq__question__title__text">
+                    Is it compatible with Oculus Quest?
+                  </span>
+
+                  <span class="icon icon--lang-arrow faq__question__title__icon"></span>
+                </button>
+
+
+                <div class="faq__question__content">
+                  <p class="faq__question__description">
+                    Despite being approached from many different angles, all traditional VR Locomotion systems including roomscale, teleportation, and free locomotion failed to provide an optimal solution capable of integrating high immersion with convenience. KAT loco does all of that without repeating their flaws. Our system offers a complete and versatile solution for an affordable price what makes it a perfect choice for home-use. It is also 100% user friendly, wireless, universally compatible, and more! It even offers decoupled head and body directions!
+                  </p>
+                  <p class="faq__question__footer-text">
+                    Last updated: Wed, June 12 2019 7:07 PM UTC +03:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="header__bottom__more faq__more">
+            <a href="" class="header__bottom__more-link">More</a>
+            <a href="#lang" class="icon icon--lang-arrow"></a>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="help faq" id="help">
+
+      <div class=" faq__content">
+
+        <div class="top-bar__menu top-bar__help">
+          <a href="#" class="icon icon--close"></a>
+        </div>
+
+        <div class="faq__wrapper">
+          <div class="help__title">
+            <p class="faq__title-white">HOW CAN WE <span class="faq__title-blue">HELP</span> YOU?</p>
+          </div>
+
+          <div class="help__content">
+            <p class="help__description">Welcome to our help center. Our goal is to make the process of
+              getting acquainted and purchase as easy and pleasant as possible. Need help with your KAT VR loco product? Many product questions can be resolved by reviewing our Product Support <span class="help__description help__blue">FAQs</span>.
+            </p>
+
+            <p class="help__description">
+              Please also feel free to <span class="help__description help__blue"> Contact Us </span> directly should you need anything further. We’re happy to help.
+            </p>
+
+            <div class="help__link">
+              <ul class="help__link__list">
+                <li><a href="" class="help__link__item help__blue">Instruction manual</a></li>
+                <li><a href="" class="help__link__item help__blue">Where to go for a warranty</a></li>
+                <li><a href="" class="help__link__item help__blue">Service Policy</a></li>
+              </ul>
+            </div>
+
+            <div class="help__date">
+              <ul class="help__date__list">
+                <li><a  href="tel:+86-0571-86105373"  class="help__date__item">+86-0571-86105373</a></li>
+                <li><a href="mailto:global@katvr.com" class="help__date__item">global@katvr.com</a></li>
+                <li><a href="mailto:overseas@katvr.com" class="help__date__item">overseas@katvr.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <a href="" class="modal__close">&times;</a>
+
+        <div class="modal__video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/FMoP7Dxvtqs"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="buy-modal" class="modal__buy">
+      <div class="buy-main">
+        <div class="container">
+          <div class="checkout">
+
+            <input type="radio" name="step" id="step1" checked>
+            <input type="radio" name="step" id="step2">
+            <input type="radio" name="step" id="step3">
+
+            <header class="buy-header">
+              <div class="buy-top-bar">
+                <a href="#" class="top-bar__logo-link">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='48'%20height='10'%20viewBox='0%200%2048%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3crect%20width='48'%20height='10'%20fill='url(%23pattern0_1_4167)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_1_4167'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_1_4167'%20transform='matrix(0.0094697%200%200%200.0454545%20-0.00662879%200)'/%3e%3c/pattern%3e%3cimage%20id='image0_1_4167'%20width='107'%20height='22'%20preserveAspectRatio='none'%20xlink:href='data:image/png;base64,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'/%3e%3c/defs%3e%3c/svg%3e"
+                    alt="logo"
+                    class="top-bar__logo">
+                </a>
+                <a href="index.html" class="icon icon--close"></a>
+              </div>
+
+              <div class="buy-header__bottom">
+                <span class="buy-header__bottom__pages">Place Order</span>
+                <span class="buy-header__bottom__pages">Pay</span>
+                <span class="buy-header__bottom__pages">Complete</span>
+              </div>
+            </header>
+
+            <main class="buy-content">
+              <section class="page page--1">
+                <div class="buy-content__block-1__content">
+                  <img
+                    src="/layout_KateVR/assets/kat-header-img-CuSwFuIM.svg"
+                    alt=""
+                    class="buy-content__block-1__photo">
+
+                  <div class="buy-content__block-1__amount-prise">
+
+                    <div class="buy-content__block-1__amount">
+                      <p class="buy-content__block-1__amount-prise__text">Quantity</p>
+
+                      <div class="buy-content__block-1__quantity">
+                        <select class="buy-content__block-1__quantity__select" name="quantity">
+                          <option class="top-bar__lang-switcher__link" value="1">1</option>
+                          <option class="top-bar__lang-switcher__link"  value="2">2</option>
+                          <option class="top-bar__lang-switcher__link"  value="3">3</option>
+                          <option class="top-bar__lang-switcher__link"  value="4">4</option>
+                          <option class="top-bar__lang-switcher__link"  value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="buy-content__block-1__prise">
+                      <p class="buy-content__block-1__amount-prise__text">Price</p>
+                      <p class="buy-content__block-1__amount-prise__number">1200$</p>
+                    </div>
+                  </div>
+
+                  <form class="buy-content__block-1__right" onsubmit="this.reset(); return false;">
+
+                    <div class="contact__group buy-content__block-1__group buy-content__block-1__group--left">
+                      <p class="contact__input__text">First Name*</p>
+                      <input type="text" class="contact__input" placeholder=" " required>
+                    </div>
+
+                    <div class="contact__group buy-content__block-1__group buy-content__block-1__group--right">
+                      <p class="contact__input__text">Last Name*</p>
+                      <input type="text" class="contact__input" placeholder=" " required>
+                    </div>
+
+                    <div class="contact__group buy-content__block-1__group buy-content__block-1__group--left">
+                      <p class="contact__input__text">Email*</p>
+                      <input type="email" class="contact__input" required>
+                    </div>
+
+                    <div class="contact__group buy-content__block-1__group buy-content__block-1__group--right">
+                      <p class="contact__input__text">Phone Number*</p>
+                      <input type="tel" class="contact__input" required>
+                    </div>
+
+                    <div class="buy-content__block-1__amount buy-content__block-1__group--left">
+                      <p class="buy-content__block-1__region__text">Country*</p>
+                      <div class="buy-content__block-1__quantity buy-content__block-1__region">
+                        <select class="buy-content__block-1__region__select buy-content__block-1__quantity__select" name="quantity">
+                          <option value="1">Ukraine</option>
+                          <option value="2">France</option>
+                          <option value="3">Spain</option>
+                          <option value="4">United States</option>
+                          <option value="5">China</option>
+                          <option value="6">Italy</option>
+                          <option value="7">Turkey</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="buy-content__block-1__amount buy-content__block-1__group--right">
+                      <p class="buy-content__block-1__region__text">City*</p>
+                      <div class="buy-content__block-1__quantity buy-content__block-1__region">
+                        <select class="buy-content__block-1__region__select buy-content__block-1__quantity__select" name="quantity">
+                          <option value="1">Kyiv</option>
+                          <option value="2">Zaporizhia</option>
+                          <option value="3">Kharkiv</option>
+                          <option value="4">Odessa</option>
+                          <option value="5">Dnipro</option>
+                          <option value="6">Donetsk</option>
+                          <option value="7">Mykolaiv</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="contact__group buy-content__block-1__group buy-content__block-1__group--left">
+                      <p class="contact__input__text">Shipping Adress*</p>
+                      <input type="text" class="contact__input" required>
+                    </div>
+
+                    <div class="contact__group buy-content__block-1__group buy-content__block-1__group--right">
+                      <p class="contact__input__text">Shipping Adress 2</p>
+                      <input type="text" class="contact__input" required>
+                    </div>
+
+                    <label for="step2" class="btn-next">Purchase</label>
+
+                  </form>
+                </div>
+              </section>
+
+              <section class="page page--2">
+                <div class="buy-content__block-1__content">
+                  <img
+                    src="/layout_KateVR/assets/kat-header-img-CuSwFuIM.svg"
+                    alt=""
+                    class="buy-content__block-1__photo">
+
+                  <div class="buy-content__block-1__amount-prise buy-content__block-2__amount-prise">
+
+                    <div class="buy-content__block-1__amount">
+                      <p class="buy-content__block-1__amount-prise__text">Quantity</p>
+
+                      <div class="buy-content__block-1__quantity">
+                        <select class="buy-content__block-1__quantity__select" name="quantity">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="buy-content__block-1__prise">
+                      <p class="buy-content__block-1__amount-prise__text">Price</p>
+                      <p class="buy-content__block-1__amount-prise__number">1200$</p>
+                    </div>
+                  </div>
+
+                  <form class="buy-content__block-1__right buy-content__block-2__right" onsubmit="this.reset(); return false;">
+                    <div class="buy-content__block-2__card__wrapper">
+                      <p class="buy-content__block-2__label">
+                        Card Number*
+                      </p>
+
+                      <div class="buy-content__block-2__card-row">
+                        <div class="buy-content__block-2__card-inputs">
+                          <input
+                            id="card-1"
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="4"
+                            placeholder="0000"
+                            class="buy-content__block-2__card-number contact__input buy-content__block-2__card-number--active"
+                          >
+                          <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="4"
+                            placeholder="0000"
+                            class="buy-content__block-2__card-number contact__input"
+                          >
+                          <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="4"
+                            placeholder="0000"
+                            class="buy-content__block-2__card-number contact__input"
+                          >
+                          <input
+                            type="text"
+                            inputmode="numeric"
+                            maxlength="4"
+                            placeholder="0000"
+                            class="buy-content__block-2__card-number contact__input"
+                          >
+                        </div>
+
+                        <div class="buy-content__block-2__card-logo">
+                          <img
+                            src="data:image/svg+xml,%3csvg%20width='54'%20height='34'%20viewBox='0%200%2054%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M52.1286%200H1.79709C0.804585%200%200%200.804585%200%201.79709V31.9048C0%2032.8973%200.804585%2033.7019%201.79709%2033.7019H52.1286C53.1211%2033.7019%2053.9256%2032.8973%2053.9256%2031.9048V1.79709C53.9256%200.804585%2053.1211%200%2052.1286%200Z'%20fill='%23F9F9F9'/%3e%3cpath%20d='M24.8151%2021.913H22.1797L23.8263%2011.7969H26.4618L24.8151%2021.913Z'%20fill='%230066B2'/%3e%3cpath%20d='M19.9658%2011.7972L17.455%2018.7534L17.1584%2017.2573L16.2685%2012.7087C16.2168%2012.426%2016.0588%2012.1739%2015.8268%2012.0043C15.5948%2011.8348%2015.3067%2011.7606%2015.0217%2011.7972H10.8686L10.8213%2011.9692C11.7936%2012.2116%2012.723%2012.6017%2013.5771%2013.1257L15.8643%2021.9263H18.6116L22.7861%2011.7972H19.9658Z'%20fill='%230066B2'/%3e%3cpath%20d='M40.6843%2021.9264H43.1048L40.9982%2011.8103H38.8786C38.6223%2011.7904%2038.3662%2011.8526%2038.1475%2011.9879C37.9288%2012.1231%2037.7588%2012.3244%2037.6619%2012.5626L33.7324%2021.9264H36.4797L37.03%2020.426H40.3791L40.6843%2021.9264ZM37.7866%2018.3494L39.171%2014.5618L39.9492%2018.3494H37.7866Z'%20fill='%230066B2'/%3e%3cpath%20d='M33.9389%2014.2309L34.3173%2012.0383C33.5553%2011.7709%2032.7558%2011.6257%2031.9484%2011.6084C30.6371%2011.6084%2027.5158%2012.1888%2027.5158%2014.9661C27.5158%2017.5801%2031.1616%2017.6102%2031.1616%2018.9859C31.1616%2020.3617%2027.8942%2020.1123%2026.8151%2019.2439L26.4238%2021.5182C27.3638%2021.9126%2028.3754%2022.1073%2029.3946%2022.09C31.1917%2022.09%2033.9045%2021.1571%2033.9045%2018.6248C33.9045%2015.9936%2030.2287%2015.7486%2030.2287%2014.605C30.2287%2013.4614%2032.8125%2013.6076%2033.9389%2014.2309Z'%20fill='%230066B2'/%3e%3cpath%20d='M17.1584%2017.2573L16.2685%2012.7087C16.2168%2012.426%2016.0588%2012.1739%2015.8268%2012.0043C15.5948%2011.8348%2015.3067%2011.7606%2015.0217%2011.7972H10.8686L10.8213%2011.9692C12.2503%2012.3326%2013.5836%2013.0014%2014.7293%2013.9297C15.8189%2014.8047%2016.657%2015.9529%2017.1584%2017.2573Z'%20fill='%23F9A533'/%3e%3c/svg%3e"
+                            alt="Visa"
+                            class="buy-content__block-2__card-img"
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="buy-content__block-2__group">
+                      <p class="buy-content__block-1__region__text">Card Holder Name*</p>
+                      <input
+                        id="card-holder"
+                        type="text"
+                        placeholder=""
+                        class="contact__input"
+                      >
+                    </div>
+
+                    <div class="buy-content__block-2__bottom">
+                      <div class="buy-content__block-2__group">
+                        <p class="buy-content__block-1__region__text">Expiration Date*</p>
+                        <input
+                          id="exp-date"
+                          type="text"
+                          inputmode="numeric"
+                          placeholder="MM / YY"
+                          class="buy-content__block-2__input buy-content__block-2__input-1"
+                        >
+                      </div>
+
+                      <div class="buy-content__block-2__group">
+                        <p class="buy-content__block-1__region__text">CVV*</p>
+                        <input
+                          id="cvv"
+                          type="text"
+                          inputmode="numeric"
+                          maxlength="3"
+                          placeholder="000"
+                          class="buy-content__block-2__input buy-content__block-2__input-2"
+                        >
+                      </div>
+                    </div>
+                    <label for="step3" class="btn-next">Purchase</label>
+                  </form>
+                </div>
+              </section>
+
+              <section class="page page--3">
+                <h2 class="buy-content__block-3__title">Thank you for <span class="buy-content__block-3__title__blue">your</span> order!</h2>
+                <p class="buy-content__block-3__description">Your order has been placed and is being processed. You will recive an email with the order details</p>
+
+                <a href="index.html" class="buy-content__block-3__button">Back to homepage</a>
+              </section>
+            </main>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <main>
+      <section class="more">
+        <div class="container">
+          <p class="more__title">MORE THAN <span class="help__blue">GAMING!</span></p>
+          <p class="more__description">
+            This also made for people who are interested in...
+          </p>
+
+          <div class="more__cards">
+            <article class="more__card">
+              <div class="icon icon--education more__card__icon"></div>
+              <p class="more__card__title">EDUCATION</p>
+              <p class="more__card__description">
+                Create aducational simulations, trainings and much more with unlimited virtual space and minimum physical space
+              </p>
+            </article>
+
+            <article class="more__card">
+              <div class="icon icon--building more__card__icon"></div>
+              <p class="more__card__title">REAL ESTATE</p>
+              <p class="more__card__description">
+                Desighn architectural projects in a deeply realistic environment allowing visitors to freely walk around, and feel their vibe
+              </p>
+            </article>
+
+            <article class="more__card">
+              <div class="icon icon--fitnes more__card__icon"></div>
+              <p class="more__card__title">FITNESS</p>
+              <p class="more__card__description">
+                Combine business with pleasure, and discover countless ways to stay fit while playing your favorite VR Games!
+              </p>
+            </article>
+
+            <article class="more__card">
+              <div class="icon icon--network more__card__icon"></div>
+              <p class="more__card__title">SOCIAL INTERACTIONS</p>
+              <p class="more__card__description">
+                Hang out with your friends in the virtual world when you can’t meet space requirements
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+
+          <div class="about__content">
+            <div class="about__first">
+
+              <p class="about__first__title">ABOUT <span class="help__blue">PRODUCT</span></p>
+
+              <div class="about__first__numder">
+                <p class="about__first__numder__left about__first__numder__item">1</p>
+                <span class="about__first__numder__line about__first__numder__item">/</span>
+                <p class="about__first__numder__right about__first__numder__item">5</p>
+              </div>
+
+              <div class="about__first__left">
+                <div class="about__first__img">
+                  <img
+                    src="/layout_KateVR/assets/kat-about-img-DaTqC-tH.svg"
+                    alt=""
+                    class="about__first__img__photo">
+
+                  <div class="about__first__button-small">
+                    <div class="about__first__button-small__round about__first__button-small__round--active"></div>
+                    <div class="about__first__button-small__round"></div>
+                    <div class="about__first__button-small__round"></div>
+                    <div class="about__first__button-small__round"></div>
+                    <div class="about__first__button-small__round"></div>
+                  </div>
+
+                  <div class="header__bottom__switch about__first__button-big">
+                    <div class="header__bottom__switch__text">
+                      <button class="header__bottom__switch-btn header__bottom__switch-btn-left">Previous</button>
+                      <button class="header__bottom__switch-btn header__bottom__switch-btn-right">Next</button>
+                    </div>
+                    <div class="header__bottom__switch-line">
+                      <div class="header__bottom__switch-progress-1"></div>
+                      <div class="header__bottom__switch-progress-2"></div>
+                      <div class="header__bottom__switch-progress-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about__first__right">
+                <p class="about__first__description">
+                  KAT loco is a foot-based VR locomotion system that gives complete physical control over lower-body actions, allowing you to freely walk, run, and carry out just any other movement in virtual reality.
+                </p>
+                <a href="#videoModal" class="header__bottom__play-link">
+                  <img
+                    src="/layout_KateVR/assets/video-play-_uw9abpJ.svg"
+                    alt="photo-button"
+                    class="header__bottom__play">
+                </a>
+              </div>
+            </div>
+
+            <div class="about__second">
+              <div class="about__second__left">
+                <p class="about__second__title-small">Hello,</p>
+                <p class="about__second__title">NICE TO MEET <span class=" about__second__title__blue about__second__title">YOU!</span></p>
+                <p class="about__second__description">
+                  KAT VR is an independent company dedicated to the research, development, and sales of VR Locomotion products and solutions. Founded in 2013, we have quickly grown to become one of the world’s leading professional suppliers of VR games’ & simulations’ equipment
+                </p>
+              </div>
+
+              <div class="about__second__right">
+                <img
+                  src="/layout_KateVR/assets/kat-about-text-CKR1Ste1.svg"
+                  alt=""
+                  class="about__second__img">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="tech" id="tech">
+        <div class="container">
+
+          <div class="tech__content">
+            <h2 class="tech__title">TECH  <span class="tech__title tech__title-blue"> SPECS </span></h2>
+
+            <div class="tech__photo">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='46'%20height='202'%20viewBox='0%200%2046%20202'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M44.7259%200.357143C19.225%2025.3605%202.67258%2059.6619%200.697822%2098.1722C-1.30506%20137.231%2012.0521%20173.517%2035.47%20201.147'%20stroke='%2305C2DF'/%3e%3c/svg%3e"
+                alt=""
+                class="tech__photo__ellips">
+              <img
+                src="/layout_KateVR/assets/tech-bg-img-kat-C7wXjnB1.svg"
+                alt=""
+                class="tech__photo__img">
+            </div>
+
+            <div class="tech__blok-1">
+              <button type="button" class="icon icon--tech-plus"></button>
+              <div class="tech__blok-1__text tech__blok__text">
+                <p class="tech__blok__title">SENSOR</p>
+                <p class="tech__blok__description">
+                  Weight: 35g/1.23oz each <br>
+                  Dimension: 50mm/1.97in <br>
+                  24mm/0.94in <br>
+                  Light: LED lights
+                </p>
+              </div>
+
+              <img
+                src="data:image/svg+xml,%3csvg%20width='404'%20height='72'%20viewBox='0%200%20404%2072'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.5%203H403V72'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='3'%20cy='3'%20r='3'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+                alt=""
+                class="tech__blok__img tech__blok-1__img">
+            </div>
+
+            <div class="tech__blok-2">
+              <button type="button" class="icon icon--tech-plus"></button>
+              <img
+                src="data:image/svg+xml,%3csvg%20width='192'%20height='245'%20viewBox='0%200%20192%20245'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M188.5%201.4585V241.958H3.5'%20stroke='%2305C2DF'/%3e%3cpath%20d='M191.5%202.99998C191.5%204.65683%20190.157%205.99998%20188.5%205.99998C186.843%205.99998%20185.5%204.65683%20185.5%202.99998C185.5%201.34312%20186.843%20-2.46877e-05%20188.5%20-2.46877e-05C190.157%20-2.46877e-05%20191.5%201.34312%20191.5%202.99998Z'%20fill='%2305C2DF'/%3e%3ccircle%20cx='3'%20cy='241.958'%20r='3'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+                alt=""
+                class="tech__blok__img tech__blok-2__img">
+
+              <div class="tech__blok-2__text tech__blok__text">
+                <p class="tech__blok__title">BATTERRIES</p>
+                <p class="tech__blok__description">
+                  Type: Lthium-lon polymer batteries <br>
+                  Capacity: 370mAh  <br>
+                  Battery life: 10h of continuous use 150 hours on stand by  <br>
+                  Charging: Fast charging - 1 hour  <br>
+                  Charging voltage and current: 5V = 0.5A
+                </p>
+              </div>
+
+            </div>
+
+            <div class="tech__blok-3">
+              <button type="button"  class="icon icon--tech-plus"></button>
+              <img
+                src="data:image/svg+xml,%3csvg%20width='134'%20height='113'%20viewBox='0%200%20134%20113'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2.95898%20110H40.959V3H129.959'%20stroke='%2305C2DF'/%3e%3cpath%20d='M6%20110C6%20111.657%204.65685%20113%203%20113C1.34315%20113%200%20111.657%200%20110C0%20108.343%201.34315%20107%203%20107C4.65685%20107%206%20108.343%206%20110Z'%20fill='%2305C2DF'/%3e%3cpath%20d='M133.917%203C133.917%204.65685%20132.574%206%20130.917%206C129.26%206%20127.917%204.65685%20127.917%203C127.917%201.34315%20129.26%200%20130.917%200C132.574%200%20133.917%201.34315%20133.917%203Z'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+                alt=""
+                class="tech__blok__img tech__blok-3__img">
+
+              <div class="tech__blok-3__text tech__blok__text">
+                <p class="tech__blok__title">CONNECTION</p>
+                <p class="tech__blok__description">
+                  Wireless: Bluetooth 4.2 <br>
+                  Signal range: 5m <br>
+                  Receiver: USB 2.0 and above
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <p class="benefits__title">WHY  <span class="benefits__title benefits__title__blue">KAT LOCO?</span></p>
+
+          <div class="benefits__content">
+
+            <article class="benefits__card">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M36.0135%2027.0792V20.0688M52.6458%2034.3644H60.7558M22.9551%2044.8111H27.3537M44.9482%2059.519V52.5087'%20stroke='%2305C2DF'/%3e%3crect%20x='27.7168'%20y='27.4414'%20width='24.567'%20height='24.567'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='32.3896'%20y='32.1152'%20width='15.4948'%20height='15.4948'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='60.9814'%20y='0.5'%20width='18.5189'%20height='18.5189'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='65.3799'%20y='4.89844'%20width='9.99656'%20height='9.99656'%20rx='2.5'%20stroke='%2305C2DF'/%3e%3crect%20x='0.5'%20y='0.5'%20width='18.5189'%20height='18.5189'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='4.89844'%20y='4.89844'%20width='9.99656'%20height='9.99656'%20rx='2.5'%20stroke='%2305C2DF'/%3e%3crect%20x='1.3252'%20y='60.4312'%20width='18.5189'%20height='18.5189'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='5.72363'%20y='64.8301'%20width='9.99656'%20height='9.99656'%20rx='2.5'%20stroke='%2305C2DF'/%3e%3crect%20x='60.9814'%20y='60.4312'%20width='18.5189'%20height='18.5189'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='65.3799'%20y='64.8301'%20width='9.99656'%20height='9.99656'%20rx='2.5'%20stroke='%2305C2DF'/%3e%3cpath%20d='M45.2236%2027.0791V9.89697H60.3439'%20stroke='%2305C2DF'/%3e%3cpath%20d='M27.3535%2037.1133L9.89648%2037.1133L9.89649%2019.5188'%20stroke='%2305C2DF'/%3e%3cpath%20d='M52.7837%2040.9624L69.9658%2040.9624L69.9658%2059.9315'%20stroke='%2305C2DF'/%3e%3cpath%20d='M36.5635%2052.5088L36.5635%2069.6909L20.2061%2069.6909'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='36.0133'%20cy='17.5943'%20r='1.97423'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='63.2301'%20cy='34.3644'%20r='1.97423'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='20.6188'%20cy='44.8111'%20r='1.97423'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='44.8111'%20cy='61.8556'%20r='1.97423'%20stroke='%2305C2DF'/%3e%3c/svg%3e"
+                alt="photo"
+                class="benefits__card__img benefits__card__img-1">
+              <p class="benefits__card__title">UNIVERSALLY COMPATIBLE</p>
+              <p class="benefits__card__description">KAT Loco offers universal compatibility across all major VR headsets and platforms allowing you to play any VR game with support for Free Locomotion</p>
+            </article>
+
+            <article class="benefits__card">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='88'%20height='80'%20viewBox='0%200%2088%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='2.06152'%20y='1.91992'%20width='84.3965'%20height='59.5917'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3cline%20x1='1.56152'%20y1='51.5708'%20x2='86.958'%20y2='51.5708'%20stroke='%2305C2DF'/%3e%3cline%20x1='40.0723'%20y1='56.7778'%20x2='47.9243'%20y2='56.7778'%20stroke='%2305C2DF'%20stroke-linecap='round'/%3e%3crect%20x='27.0557'%20y='62.0386'%20width='33.8876'%20height='5.15385'%20stroke='%2305C2DF'/%3e%3crect%20x='16.6416'%20y='73.3994'%20width='54.716'%20height='5.15385'%20stroke='%2305C2DF'/%3e%3cpath%20d='M61.3066%2067.7188L70.0303%2072.873H17.9688L26.6934%2067.7188H61.3066Z'%20stroke='%2305C2DF'/%3e%3cpath%20d='M24.8182%2013.7273L32.8182%2036.0909H32.9091L40.9091%2013.7273H41.6818L33.3636%2037H32.3636L24.0455%2013.7273H24.8182ZM46.3551%2037V13.7273H53.1733C54.4763%2013.7273%2055.6278%2014.0038%2056.6278%2014.5568C57.6354%2015.1098%2058.4233%2015.8826%2058.9915%2016.875C59.5672%2017.8674%2059.8551%2019.0303%2059.8551%2020.3636C59.8551%2021.6818%2059.5672%2022.8371%2058.9915%2023.8295C58.4233%2024.8144%2057.6354%2025.5833%2056.6278%2026.1364C55.6278%2026.6818%2054.4763%2026.9545%2053.1733%2026.9545H46.7188V26.2273H53.1733C54.34%2026.2273%2055.3703%2025.9848%2056.2642%2025.5C57.1581%2025.0152%2057.8589%2024.3333%2058.3665%2023.4545C58.8741%2022.5758%2059.1278%2021.5455%2059.1278%2020.3636C59.1278%2019.1742%2058.8741%2018.1364%2058.3665%2017.25C57.8589%2016.3636%2057.1581%2015.678%2056.2642%2015.1932C55.3703%2014.7008%2054.34%2014.4545%2053.1733%2014.4545H47.0824V37H46.3551ZM55.2188%2026.4091L60.946%2037H60.1278L54.4006%2026.4091H55.2188Z'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+                alt="photo"
+                class="benefits__card__img benefits__card__img-2">
+              <p class="benefits__card__title">VR/PC CONTROL PANEL</p>
+              <p class="benefits__card__description">Our Multifunctional Software allows for quick access to KAT Loco’s control panel both from a computer desktop, and directly from your VR headset.</p>
+            </article>
+
+            <article class="benefits__card">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='113'%20height='81'%20viewBox='0%200%20113%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='56.1543'%20cy='40.8398'%20r='13.5898'%20stroke='%2305C2DF'/%3e%3cpath%20d='M70.5967%2026.4346C75.2662%2029.5236%2078.3461%2034.8222%2078.3461%2040.8402C78.3461%2046.8582%2075.2662%2052.1568%2070.5967%2055.2458'%20stroke='%2305C2DF'/%3e%3cpath%20d='M70.7725%2055.106L77.1129%2063.2076'%20stroke='%2305C2DF'/%3e%3cpath%20d='M76.9371%2063.3835C84.3659%2058.5117%2089.2657%2050.1549%2089.2657%2040.6637C89.2657%2031.1725%2084.3659%2022.8157%2076.9371%2017.9438L70.5967%2026.5739'%20stroke='%2305C2DF'/%3e%3cpath%20d='M83.9824%209.49023C93.9582%2016.0994%20100.538%2027.436%20100.538%2040.3117C100.538%2053.1875%2093.9582%2064.5241%2083.9824%2071.1332'%20stroke='%2305C2DF'/%3e%3cpath%20d='M83.9818%209.66635L90.3222%200.684082C103.27%209.21932%20111.809%2023.8598%20111.809%2040.4879C111.809%2057.1159%20103.27%2071.7564%2090.3222%2080.2916L83.8057%2071.1332'%20stroke='%2305C2DF'/%3e%3cpath%20d='M41.7119%2026.4346C37.0424%2029.5236%2033.9625%2034.8222%2033.9625%2040.8402C33.9625%2046.8582%2037.0424%2052.1568%2041.7119%2055.2458'%20stroke='%2305C2DF'/%3e%3cpath%20d='M41.5361%2055.106L35.1957%2063.2076'%20stroke='%2305C2DF'/%3e%3cpath%20d='M35.3715%2063.3835C27.9427%2058.5117%2023.0429%2050.1549%2023.0429%2040.6637C23.0429%2031.1725%2027.9427%2022.8157%2035.3715%2017.9438L41.7119%2026.5739'%20stroke='%2305C2DF'/%3e%3cpath%20d='M28.3271%209.49023C18.3513%2016.0994%2011.7716%2027.436%2011.7716%2040.3117C11.7716%2053.1875%2018.3513%2064.5241%2028.3271%2071.1332'%20stroke='%2305C2DF'/%3e%3cpath%20d='M28.3278%209.66635L21.9874%200.684082C9.04004%209.21932%200.500369%2023.8598%200.500369%2040.4879C0.500369%2057.1159%209.04004%2071.7564%2021.9874%2080.2916L28.5039%2071.1332'%20stroke='%2305C2DF'/%3e%3c/svg%3e"
+                alt="photo"
+                class="benefits__card__img benefits__card__img-3">
+              <p class="benefits__card__title">WIRELESS SENSORS</p>
+              <p class="benefits__card__description">What makes it even more advanced, KAT Loco is entirely wireless, and comes with a complete system of algorithms, super durable batteries and more!</p>
+            </article>
+
+            <a href="#buy-modal" class="benefits__button">Buy Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact__content">
+
+            <div class="contact__title">
+              <p class="contact__question">Have any questions?</p>
+              <p class="contact__text">GET <span class="contact__text contact__text__blue">IN TOUCH</span></p>
+            </div>
+
+            <form class="contact__right" onsubmit="this.reset(); return false;">
+
+              <div class="contact__group">
+                <p class="contact__input__text">Name*</p>
+                <input type="text" class="contact__input" placeholder=" " required>
+              </div>
+
+              <div class="contact__group">
+                <p class="contact__input__text">Email*</p>
+                <input type="email" class="contact__input" required>
+              </div>
+
+              <div class="contact__group">
+                <p class="contact__input__text">Phone*</p>
+                <input type="tel" class="contact__input" required>
+              </div>
+
+              <div class="contact__group">
+                <p class="contact__input__text">Message</p>
+                <textarea class="contact__input contact__input__massage" required></textarea>
+              </div>
+
+              <div class="contact__buttons">
+                <button class="contact__button">Contact Us</button>
+                <a href="#header" class="contact__arrow icon icon--arrow"></a>
+              </div>
+
+            </form>
+
+            <p class="contact__description">Our manager will reply you within 15 minutes</p>
+
+
+            <div class="contact__link">
+
+              <img
+                src="data:image/svg+xml,%3csvg%20width='48'%20height='10'%20viewBox='0%200%2048%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3crect%20width='48'%20height='10'%20fill='url(%23pattern0_1_4167)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_1_4167'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_1_4167'%20transform='matrix(0.0094697%200%200%200.0454545%20-0.00662879%200)'/%3e%3c/pattern%3e%3cimage%20id='image0_1_4167'%20width='107'%20height='22'%20preserveAspectRatio='none'%20xlink:href='data:image/png;base64,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'/%3e%3c/defs%3e%3c/svg%3e"
+                alt="logo"
+                class="contact__logo">
+
+              <ul class="nav__list contact__list">
+                <li><a href="#about" class="nav__link contact__item">About</a></li>
+                <li><a href="#tech" class="nav__link contact__item">Tech</a></li>
+                <li><a href="#benefits" class="nav__link contact__item">Benefits</a></li>
+                <li><a href="#contact" class="nav__link contact__item">Contact</a></li>
+              </ul>
+
+              <div class="contact__icons">
+                <a href=https://www.facebook.com/  target="_blank" class="icon icon--facebook"></a>
+                <a href=https://twitter.com/  target="_blank" class="icon icon--twitter"></a>
+                <a href="https://www.youtube.com/" target="_blank" class="icon icon--youtube"></a>
+                <a href="https://www.reddit.com/" target="_blank" class="icon icon--redit"></a>
+              </div>
+            </div>
+
+
+            <div class="contact__data">
+              <a href="tel:+86-0571-86105373" class="contact__data__text">+86-0571-86105373</a>
+              <a href="mailto:global@katvr.com" class="contact__data__text">global@katvr.com</a>
+              <a href="mailto:overseas@katvr.com" class="contact__data__text">overseas@katvr.com</a>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
+
+
