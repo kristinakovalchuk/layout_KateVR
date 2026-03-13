@@ -35,6 +35,9 @@ body {
   &:has(.modal:target) {
     overflow: hidden;
   }
+  &:has(.modal__buy:target) {
+    overflow: hidden;
+  }
 }
 
 html {
